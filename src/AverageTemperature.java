@@ -1,3 +1,5 @@
+// Assignment #1: Average Temperature.
+
 import java.util.Scanner;
 
 public class AverageTemperature {
