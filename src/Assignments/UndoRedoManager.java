@@ -40,10 +40,38 @@ public class UndoRedoManager<T> {
 
     //Redo Operation
     public T redo(){
-        //implement me
+        if (currentState != null && currentState.next != null) {
+            currentState = currentState.next;
+            return currentState.state;
+        }
+        return null;
     }
 
     public static void main(String[] args) {
+        UndoRedoManager<String> manager = new UndoRedoManager<>();
+
+        manager.addState("1");
+        manager.addState("2");
+        manager.addState("3");
+
+        System.out.println("Undo " + manager.undo());
+        System.out.println("Undo " + manager.undo());
+        System.out.println("Redo " + manager.redo());
+        System.out.println("Redo " + manager.redo());
+        manager.addState("4");
+        manager.addState("5");
+
+        System.out.println("Redo " + manager.undo());
+
+        System.out.println("Redo " + manager.redo());
+        System.out.println("Redo " + manager.redo());
+
+
+
+        // System.out.println("Redo " + manager.redo());
+
+
+
 
 
     }
