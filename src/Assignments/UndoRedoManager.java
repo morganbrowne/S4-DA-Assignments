@@ -19,20 +19,23 @@ public class UndoRedoManager<T> {
 
     }
     private Node currentState;
-    //Undo operation
 
+    //perform an operation
+    public void  addState (T newState) {
+        Node newNode = new Node (newState);
+        if (currentState != null) {
+            newNode.prev = currentState; // The .prev allows to move backward when calling undo().
+            currentState.next = newNode;
+        }
+        currentState = newNode;
+    }
+    //Undo operation
     public T undo(){
         if (currentState != null && currentState.prev != null) {
             currentState = currentState.prev;
             return currentState.state;
         }
         return null;
-    }
-
-    //perform an operation
-    public void  addState (T newState) {
-        //implement me
-
     }
 
     //Redo Operation
