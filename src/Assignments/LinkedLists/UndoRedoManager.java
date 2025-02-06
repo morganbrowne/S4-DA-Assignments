@@ -1,4 +1,4 @@
-package Assignments;
+package Assignments.LinkedLists;
 
 /**
  * Assignment #4.

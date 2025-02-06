@@ -1,4 +1,4 @@
-// Assignment #1: Average Temperature.
+package Assignments.Arrays;// Assignment #1: Average Temperature.
 
 import java.util.Scanner;
 

@@ -1,3 +1,5 @@
+package Assignments.Arrays;
+
 /**
  * Assignment 2: Movie Theater Implementation
  1: Simulate a movie theater that helps users to book and reserve seats.
@@ -64,5 +66,6 @@ public class MovieTheater {
 
 
     }
+
 }
 

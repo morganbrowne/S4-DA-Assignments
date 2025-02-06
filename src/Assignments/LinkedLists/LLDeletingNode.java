@@ -8,7 +8,7 @@
  * 3: Delete Node Anywhere
  */
 
-package Assignments;
+package Assignments.LinkedLists;
 
 import LinkedList.Node;
 
