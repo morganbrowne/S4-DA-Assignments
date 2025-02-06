@@ -26,7 +26,8 @@ public class AnimalShelterManager {
         orderCount = 0;
     }
     // enQueue to add animal to the shelter.
-    public void enQueue() {
+    public void enQueue(Animal animal) {
+        animal.
 
 
     }

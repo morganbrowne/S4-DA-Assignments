@@ -13,12 +13,15 @@ package Assignments.Queues;
 public class Animal extends AnimalShelterManager {
     private String name;
     private String type;
-    private String orderOfArival;
+    private int orderOfArival;
 
-    public Animal(String name, String type, String orderOfArival) {
+    public Animal(String name, String type ) {
         this.name = name;
         this.type = type;
-        this.orderOfArival = orderOfArival;
+    }
+
+    public void setOrderOfArival(int order) {
+        this.orderOfArival = order;
     }
 
     public String getName() {
@@ -27,7 +30,7 @@ public class Animal extends AnimalShelterManager {
     public String geType() {
         return type;
     }
-    public String getOrderOfArival() {
+    public int  getOrderOfArival() {
         return orderOfArival;
     }
 
