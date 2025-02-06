@@ -27,7 +27,15 @@ public class AnimalShelterManager {
     }
     // enQueue to add animal to the shelter.
     public void enQueue(Animal animal) {
-        animal.
+        animal.setOrderOfArival(++orderCount);
+        if (animal.getType().equals("dog")) {
+            dog.add(animal);
+        } else if (animal.getType().equals("cat")) {
+            cat.add(animal);
+        } else {// if user doesn't type cat or dog print...
+            throw new IllegalArgumentException("Not a valid animal, must be 'dog' or 'cat'. ");
+        }
+
 
 
     }

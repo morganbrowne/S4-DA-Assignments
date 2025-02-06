@@ -11,8 +11,8 @@ package Assignments.Queues;
 
 // Animal Class for the type of animal.
 public class Animal extends AnimalShelterManager {
-    private String name;
-    private String type;
+    private String name; // for name of the animal
+    private String type; // for type of animal
     private int orderOfArival;
 
     public Animal(String name, String type ) {
@@ -27,7 +27,7 @@ public class Animal extends AnimalShelterManager {
     public String getName() {
         return name;
     }
-    public String geType() {
+    public String getType() {
         return type;
     }
     public int  getOrderOfArival() {
