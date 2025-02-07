@@ -46,15 +46,28 @@ public class AnimalShelterManager {
         } // if one of the types are not available return the opposite method for said animal
         if (dog.isEmpty()) return deQueueCat();
         if (cat.isEmpty()) return deQueueDog();
+        // so the .peek() gets the oldest of both types and use "<" to compare witch type came to the shelter first.
+        return (dog.peek().getOrderOfArival() < cat.peek().getOrderOfArival()) ? deQueueDog() : deQueueCat();
     }
+
 
 
     public Animal deQueueCat() {
-
+        if (cat.isEmpty()) {
+            System.out.println("No cats available. ");
+            return null;
+        } else {
+            return cat.poll(); // can use .poll() to get the front of queue
+        }
     }
 
     public Animal deQueueDog() {
-
+        if (dog.isEmpty()) {
+            System.out.println("No dogs available. ");
+            return null;
+        } else {
+            return dog.poll();
+        }
     }
 
 
