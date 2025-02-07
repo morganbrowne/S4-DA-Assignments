@@ -35,11 +35,27 @@ public class AnimalShelterManager {
         } else {// if user doesn't type cat or dog print...
             throw new IllegalArgumentException("Not a valid animal, must be 'dog' or 'cat'. ");
         }
+    }
 
 
+    // deQueueAny for both cat and dog. take the oldest of either for customer.
+    public Animal deQueueAny() {
+        // Check if either of the two animals are in the system.
+        if (dog.isEmpty() && cat.isEmpty()) {
+            System.out.println("No cats or dogs available. ");
+        } // if one of the types are not available return the opposite method for said animal
+        if (dog.isEmpty()) return deQueueCat();
+        if (cat.isEmpty()) return deQueueDog();
+    }
+
+
+    public Animal deQueueCat() {
 
     }
 
+    public Animal deQueueDog() {
+
+    }
 
 
 
