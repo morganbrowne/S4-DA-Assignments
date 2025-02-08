@@ -69,16 +69,6 @@ public class AnimalShelterManager {
             return dog.poll();
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
 
 
