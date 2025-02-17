@@ -11,7 +11,22 @@ public class Main {
         shelter.enQueue(new Animal("Max", "dog"));
 
 
-        System.out.println("You chose to take either a dog or cat. you got a " + shelter.deQueueCat().getType() + ". and their name is " +shelter.deQueueCat().getName());
+        //System.out.println("You chose to take either a dog or cat. you got a " + shelter.deQueueCat().getType() + ". and their name is " +shelter.deQueueCat().getName());
 
+        // Taking a cat
+        Animal adotpedAnimalCat = shelter.deQueueCat();
+        if (adotpedAnimalCat != null) {
+            System.out.println("You chose to take a cat, their name is: " + adotpedAnimalCat.getName());
+        } else {
+            System.out.println("No cat available for adoption. ");
+        }
+
+        // For taking a dog.
+        Animal adoptedAnimalDog = shelter.deQueueDog();
+        if (adoptedAnimalDog != null) {
+            System.out.println("You chose to take a  dog, their name is: " + adoptedAnimalDog.getName());
+        } else {
+            System.out.println("No dogs available for adoption. ");
+        }
     }
 }
