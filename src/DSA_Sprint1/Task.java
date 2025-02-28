@@ -26,7 +26,8 @@ public class Task {
 
     // add toString to show status of the task.
     // will show "completed" or "pending"
+    @Override
     public String toString() {
-        return name + (status ? "Completed" : "Pending");
+        return name + (status ? " Completed " : " Pending ");
     }
 }
